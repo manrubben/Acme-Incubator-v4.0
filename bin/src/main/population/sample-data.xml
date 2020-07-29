@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- sample-data.xml
+-
+- Copyright (c) 2019 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="conversion-service.xml" />
+	
+	<!-- Notices -->
+
+	<bean id="notice01" class="acme.entities.Notices">
+		<property name="headerPicture" value="https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2020/07/10/Recortada/img_dsempere_20200630-151946_imagenes_lv_otras_fuentes_covid-rebrotes2-143-U442461271936j6E-U482204711624jJF-992x558@LaVanguardia-Web-Portada.jpg" />
+		<property name="title" value="Coronavirus. Nuevos rebrotes" />
+		<property name="creation" value="10-07-2020 16:13" />
+		<property name="deadline" value="10-07-2022 16:13" />
+		<property name="body" value="This is a sample notice" />
+		<property name="links">
+			<null />
+		</property>
+	</bean>
+	
+	<!-- Technology Records -->
+	
+	<bean id="technologyRecord01" class="acme.entities.TechnologyRecords">
+		<property name="title" value="Sample Technology Record" />
+		<property name="activitySector" value="Sector 1" />
+		<property name="inventorsName" value="Peter" />
+		<property name="description" value="This is a sample description" />
+		<property name="website" value="http://www.peter.com" />
+		<property name="email" value="peter@gmail.com"/>
+		<property name="indication" value="open-source"/>
+		<property name="stars" value="5"/>
+	</bean>
+	
+	<!-- Tool Records -->
+	
+	<bean id="toolRecord01" class="acme.entities.ToolRecords">
+		<property name="title" value="Sample Tool Record" />
+		<property name="activitySector" value="Sector 1" />
+		<property name="inventorsName" value="Henry" />
+		<property name="description" value="This is a sample description" />
+		<property name="website" value="http://www.henry.com" />
+		<property name="email" value="henry@gmail.com"/>
+		<property name="indication" value="closed-source"/>
+		<property name="stars" value="4"/>
+	</bean>
+	
+	<!-- Overtures -->
+	
+	<bean id="overture01" class="acme.entities.Overtures">
+		<property name="title" value="Overture 1" />
+		<property name="creation" value="13-07-2020 13:30" />
+		<property name="deadline" value="01-12-2022 18:00" />
+		<property name="paragraph" value="This is a sample paragraph" />
+		<property name="rangeMoney" value="€50,000.00" />
+		<property name="email" value="josema@gmail.com"/>
+	</bean>
+	
+	<bean id="overture02" class="acme.entities.Overtures">
+		<property name="title" value="Overture 2" />
+		<property name="creation" value="13-07-2020 19:00" />
+		<property name="deadline" value="12-05-2021 20:00" />
+		<property name="paragraph" value="This is a sample paragraph" />
+		<property name="rangeMoney" value="€20,000.00" />
+		<property name="email" value="josema@gmail.com"/>
+	</bean>
+	
+	<bean id="overture03" class="acme.entities.Overtures">
+		<property name="title" value="Overture 3" />
+		<property name="creation" value="13-07-2020 18:53" />
+		<property name="deadline" value="01-06-2020 12:00" />
+		<property name="paragraph" value="This is a sample paragraph" />
+		<property name="rangeMoney" value="€35,000.00" />
+		<property name="email" value="josema@gmail.com"/>
+	</bean>
+	
+	
+
+</beans>
