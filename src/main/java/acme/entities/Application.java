@@ -8,6 +8,8 @@ import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -30,11 +32,13 @@ public class Application extends DomainEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
+	@Pattern(regexp = "^[A-Z]{3}[-][0-9]{2}[-][0-9]{6}$")
 	private String				ticker;
 
 	@DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
+	@Past
 	@NotNull
-	private LocalDateTime		start;
+	private LocalDateTime		creation;
 
 	@NotBlank
 	@Length(max = 255)
