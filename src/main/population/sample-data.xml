@@ -200,12 +200,42 @@
 	
 	<bean name="investor1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="investor1UserAccount" />
+	</bean>
+	
+	<bean name="investor2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="investor2" />
+		<property name="password" value="investor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Investor" />
+				<property name="surname" value="Two" />
+				<property name="email" value="investor2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="investor2Investor" />
+				<ref bean="investor2Authenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="investor2Investor" class="acme.entities.roles.Investor">
+		<property name="firmName" value="Bad worker" />
+		<property name="sector" value="Sector 2" />
+		<property name="profile" value="High" />
+		<property name="userAccount" ref="investor2UserAccount" />
+	</bean>
+	
+	<bean name="investor2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="investor2UserAccount" />
 	</bean>	
 	
 	<!--  Investment Rounds -->
 	
 	<bean id="investmentRound01" class="acme.entities.InvestmentRound">
-		<property name="ticker" value="TICKER1" />
+		<property name="ticker" value="SEC-20-000000" />
 		<property name="creation" value="20-06-2020 20:11" />
 		<property name="round" value="SEED" />
 		<property name="title" value="Investment Round 1" />
@@ -218,11 +248,20 @@
 	<!--  Applications -->
 
 	<bean name="application01" class="acme.entities.Application">
-		<property name="ticker" value="TICKER1" />
+		<property name="ticker" value="SEC-20-123456" />
 		<property name="creation" value="20-07-2020 20:11" />
 		<property name="statement" value="This is a short statement" />
 		<property name="money" value="00040000.00 EUR" />
 		<property name="investor" ref="investor1Investor" />
+		<property name="investmentRound" ref="investmentRound01" />
+	</bean>
+	
+	<bean name="application02" class="acme.entities.Application">
+		<property name="ticker" value="SEC-20-999999" />
+		<property name="creation" value="20-05-2020 20:11" />
+		<property name="statement" value="This is a sample statement" />
+		<property name="money" value="00030000.00 EUR" />
+		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound01" />
 	</bean>
 	

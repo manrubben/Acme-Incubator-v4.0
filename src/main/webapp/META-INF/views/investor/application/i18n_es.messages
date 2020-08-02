@@ -1,14 +1,12 @@
-###### List ######
 
-investor.application.list.label.creation = Creation date
-investor.application.list.label.statement = Statement
-investor.application.list.label.money = Money
+investor.application.form.label.ticker = Ticker:
+investor.application.form.label.creation = Fecha de creación:
+investor.application.form.label.statement = Declaración:
+investor.application.form.label.money = Dinero:
 
-###### Form ######
+investor.application.form.button.return = Volver
 
-investor.application.form.label.ticker = Ticker
-investor.application.form.label.creation = Creation Date
-investor.application.form.label.statment = Statement
-investor.application.form.label.money = Money
+investor.application.list.label.creation = Fecha de creación
+investor.application.list.label.statement = Declaración
+investor.application.list.label.money = Dinero
 
-investor.application.form.button.return = Return
