@@ -206,7 +206,7 @@
 	
 	<bean id="investmentRound01" class="acme.entities.InvestmentRound">
 		<property name="ticker" value="TICKER1" />
-		<property name="creation" value="20-06-2030 20:11" />
+		<property name="creation" value="20-06-2020 20:11" />
 		<property name="round" value="SEED" />
 		<property name="title" value="Investment Round 1" />
 		<property name="description" value="Hello!" />
@@ -219,7 +219,7 @@
 
 	<bean name="application01" class="acme.entities.Application">
 		<property name="ticker" value="TICKER1" />
-		<property name="start" value="20-11-2020 20:11" />
+		<property name="creation" value="20-07-2020 20:11" />
 		<property name="statement" value="This is a short statement" />
 		<property name="money" value="00040000.00 EUR" />
 		<property name="investor" ref="investor1Investor" />
@@ -230,7 +230,7 @@
 	
 	<bean name="activity01" class="acme.entities.Activity">
 		<property name="title" value="Title 1" />
-		<property name="start" value="20-09-2020 20:11" />
+		<property name="start" value="20-07-2020 20:11" />
 		<property name="end" value="20-09-2021 20:11" />
 		<property name="budget" value="00080000.00 EUR" />
 		<property name="investmentRound" ref="investmentRound01" />
