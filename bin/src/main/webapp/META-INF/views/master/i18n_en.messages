@@ -35,6 +35,9 @@ master.menu.anonymous.favourite-link.ignacio = Ignacio's favourite link
 master.menu.anonymous.favourite-link.alvaro = Alvaro's favourite link
 master.menu.anonymous.favourite-link.josema = Josema's favourite link
 master.menu.anonymous.favourite-link.guille = Guille's favourite link
+master.menu.anonymous.tool-records.list = List tool records
+master.menu.anonymous.technology-records.list = List technology records
+master.menu.anonymous.notices.list = List notices
 
 # master.menu.authenticated ###################################################
 
@@ -43,12 +46,27 @@ master.menu.authenticated.list-notices = List notices
 master.menu.authenticated.list-technology-records = List technology records
 master.menu.authenticated.list-tool-records = List tool records
 master.menu.authenticated.overtures = List overtures
+master.menu.authenticated.inquiries = List inquiries
+master.menu.authenticated.challenges = List challenges
+master.menu.authenticated.investment-round = List investment rounds
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.notices = List notices
+master.menu.administrator.create-tool-records = Create tool record
+master.menu.administrator.list-tool-records = List tool records
+master.menu.administrator.technology-records.create = Create technology Record
+master.menu.administrator.technology-records.list = List technology Records
 master.menu.administrator.shutdown = Shut down
+master.menu.administrator.inquiries.list = List inquiries
+master.menu.administrator.inquiries.create = Create inquirie
+master.menu.administrator.notices.create = Create notice
+master.menu.administrator.challenges.list = List challenges
+master.menu.administrator.challenges.create = Create challenge
+master.menu.administrator.overtures.list = List overtures
+master.menu.administrator.overtures.create = Create overture
 
 # master.menu.provider ########################################################
 

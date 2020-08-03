@@ -48,6 +48,7 @@ master.menu.authenticated.list-tool-records = Listar registros de herramientas
 master.menu.authenticated.overtures = Listar propuestas
 master.menu.authenticated.inquiries = Listar solicitudes
 master.menu.authenticated.challenges = Listar desafíos
+master.menu.authenticated.investment-round = Listar rondas de inversiones
 
 # master.menu.entrepreneur ###################################################
 

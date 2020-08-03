@@ -41,6 +41,7 @@ public class Activity extends DomainEntity {
 	private LocalDateTime		end;
 
 	@NotNull
+	@Valid
 	private Money				budget;
 
 	// Relationships ----------------------------------------------------------

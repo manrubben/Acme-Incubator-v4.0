@@ -61,6 +61,8 @@
 				action="/authenticated/inquiries/list" />
 			<acme:menu-suboption code="master.menu.authenticated.challenges"
 				action="/authenticated/challenges/list" />
+				<acme:menu-suboption code="master.menu.authenticated.investment-round"
+				action="/authenticated/investment-round/list" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.entrepreneur" access="hasRole('Entrepreneur')">

@@ -48,6 +48,7 @@ master.menu.authenticated.list-tool-records = List tool records
 master.menu.authenticated.overtures = List overtures
 master.menu.authenticated.inquiries = List inquiries
 master.menu.authenticated.challenges = List challenges
+master.menu.authenticated.investment-round = List investment rounds
 
 # master.menu.entrepreneur ###################################################
 

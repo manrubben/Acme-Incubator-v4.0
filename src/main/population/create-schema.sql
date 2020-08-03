@@ -28,9 +28,9 @@
     create table `application` (
        `id` integer not null,
         `version` integer not null,
-        `creation` datetime(6),
         `money_amount` double precision,
         `money_currency` varchar(255),
+        `start` datetime(6),
         `statement` varchar(255),
         `ticker` varchar(255),
         `investment_round_id` integer not null,
