@@ -26,8 +26,8 @@
 	<acme:form-url code="entrepreneur.investmentRound.form.label.link" path="link" />
 
 	<acme:form-submit test="${command == 'show'}" code="entrepreneur.application.button.list" method="get" 
-		action="/entrepreneur/application/list-investmentRounds-app?id=${id}"/>
+		action="/entrepreneur/application/list-investment-rounds-app?id=${id}"/>
 	
-	<acme:form-return code="entrepreneur.investmentRound.form.button.return" />
+	<acme:form-return code="entrepreneur.application.form.button.return" />
 	
 </acme:form>

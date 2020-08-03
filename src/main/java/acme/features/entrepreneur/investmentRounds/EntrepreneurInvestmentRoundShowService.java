@@ -11,10 +11,10 @@ import acme.framework.components.Request;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class EntrepreneurInvestmentRoundsShowService implements AbstractShowService<Entrepreneur, InvestmentRound> {
+public class EntrepreneurInvestmentRoundShowService implements AbstractShowService<Entrepreneur, InvestmentRound> {
 
 	@Autowired
-	private EntrepreneurInvestmentRoundsRepository repository;
+	private EntrepreneurInvestmentRoundRepository repository;
 
 
 	@Override

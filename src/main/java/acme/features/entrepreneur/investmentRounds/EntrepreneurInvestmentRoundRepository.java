@@ -11,15 +11,15 @@ import acme.entities.roles.Entrepreneur;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface EntrepreneurInvestmentRoundsRepository extends AbstractRepository {
+public interface EntrepreneurInvestmentRoundRepository extends AbstractRepository {
 
-	@Query("select j from InvestmentRound j where j.id = ?1")
+	@Query("select i from InvestmentRound i where i.id = ?1")
 	InvestmentRound findOneById(int id);
 
 	@Query("select e from Entrepreneur e where e.id = ?1")
-	Entrepreneur findEmployerById(int entrepenaurId);
+	Entrepreneur findEntrepreneurById(int entrepreneurId);
 
-	@Query("select j from InvestmentRound j where j.entrepreneur.id =?1")
-	Collection<InvestmentRound> findManyByEntrepreneurId(int entrepenaurId);
+	@Query("select i from InvestmentRound i where i.entrepreneur.id =?1")
+	Collection<InvestmentRound> findManyByEntrepreneurId(int entrepreneurId);
 
 }

@@ -14,10 +14,10 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class EntrepreneurInvestmentRoundsListMineService implements AbstractListService<Entrepreneur, InvestmentRound> {
+public class EntrepreneurInvestmentRoundListMineService implements AbstractListService<Entrepreneur, InvestmentRound> {
 
 	@Autowired
-	EntrepreneurInvestmentRoundsRepository repository;
+	EntrepreneurInvestmentRoundRepository repository;
 
 
 	@Override
@@ -33,7 +33,7 @@ public class EntrepreneurInvestmentRoundsListMineService implements AbstractList
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "creation", "round", "title");
+		request.unbind(entity, model, "ticker", "creation", "title");
 	}
 
 	@Override

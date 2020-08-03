@@ -14,14 +14,14 @@ import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/entrepreneur/investmentround/")
-public class EntrepreneurInvestmentRoundsController extends AbstractController<Entrepreneur, InvestmentRound> {
+@RequestMapping("/entrepreneur/investment-round/")
+public class EntrepreneurInvestmentRoundController extends AbstractController<Entrepreneur, InvestmentRound> {
 
 	@Autowired
-	private EntrepreneurInvestmentRoundsListMineService	listMineService;
+	private EntrepreneurInvestmentRoundListMineService	listMineService;
 
 	@Autowired
-	private EntrepreneurInvestmentRoundsShowService		showService;
+	private EntrepreneurInvestmentRoundShowService		showService;
 
 
 	@PostConstruct
