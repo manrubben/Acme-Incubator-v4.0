@@ -48,6 +48,12 @@ master.menu.authenticated.list-tool-records = List tool records
 master.menu.authenticated.overtures = List overtures
 master.menu.authenticated.inquiries = List inquiries
 master.menu.authenticated.challenges = List challenges
+master.menu.authenticated.investment-round = List investment rounds
+
+# master.menu.entrepreneur ###################################################
+
+master.menu.entrepreneur = Entrepreneur
+master.menu.entrepreneur.investmentRound.list-mine = List investment rounds
 
 # master.menu.administrator ###################################################
 
@@ -76,6 +82,11 @@ master.menu.provider.favourite-link = Favourite link
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.investor ########################################################
+
+master.menu.investor = Investor
+master.menu.investor.application.list-mine = List my applications
 
 # master.menu.user-account ####################################################
 
