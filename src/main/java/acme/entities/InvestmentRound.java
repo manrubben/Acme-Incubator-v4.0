@@ -8,6 +8,7 @@ import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
@@ -32,10 +33,11 @@ public class InvestmentRound extends DomainEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@Pattern(regexp = "^[A-V]{3}\\-[0-9]{2}\\-[0-9]{6}$")
+	@Pattern(regexp = "^[A-Z]{3}[-][0-9]{2}[-][0-9]{6}$")
 	private String				ticker;
 
 	@DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
+	@Past
 	@NotNull
 	private LocalDateTime		creation;
 
