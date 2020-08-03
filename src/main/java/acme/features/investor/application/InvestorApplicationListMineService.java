@@ -13,7 +13,7 @@ import acme.framework.components.Request;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class InvestorApplicationListService implements AbstractListService<Investor, Application> {
+public class InvestorApplicationListMineService implements AbstractListService<Investor, Application> {
 
 	@Autowired
 	private InvestorApplicationRepository repository;
