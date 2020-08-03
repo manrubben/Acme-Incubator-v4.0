@@ -50,6 +50,11 @@ master.menu.authenticated.inquiries = Listar solicitudes
 master.menu.authenticated.challenges = Listar desafíos
 master.menu.authenticated.investment-round = Listar rondas de inversiones
 
+# master.menu.entrepreneur ###################################################
+
+master.menu.entrepreneur = Empresario
+master.menu.entrepreneur.investmentRound.list = Listar rondas de inversión
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
