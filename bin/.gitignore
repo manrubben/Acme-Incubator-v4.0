@@ -29,3 +29,14 @@ nbdist/
 mvnw
 
 mvnw\.cmd
+/.gitignore
+/CONTRIBUTORS.txt
+/LICENSE.txt
+/NOTICE.txt
+/README.md
+/README.txt
+/TODO.txt
+/clevercloud/
+/model.uxf
+/pom.xml
+/src/
