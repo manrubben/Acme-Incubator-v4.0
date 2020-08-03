@@ -49,6 +49,11 @@ master.menu.authenticated.overtures = Listar propuestas
 master.menu.authenticated.inquiries = Listar solicitudes
 master.menu.authenticated.challenges = Listar desafíos
 
+# master.menu.entrepreneur ###################################################
+
+master.menu.entrepreneur = Empresario
+master.menu.entrepreneur.investmentRound.list = Listar rondas de inversión
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador

@@ -62,6 +62,11 @@
 			<acme:menu-suboption code="master.menu.authenticated.challenges"
 				action="/authenticated/challenges/list" />
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.entrepreneur" access="hasRole('Entrepreneur')">
+			<acme:menu-suboption code="master.menu.entrepreneur.investmentRound.list" action="/entrepreneur/investmentRound/list-mine" />
+			<acme:menu-separator />
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator"
 			access="hasRole('Administrator')">
