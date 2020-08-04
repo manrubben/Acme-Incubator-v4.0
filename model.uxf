@@ -419,4 +419,116 @@ Overtures
 </panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>594</y>
+      <w>234</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Application
+--
++ ticker: String {NotBlank, Length}
++ creation: LocalDateTime {DateTimeFormat, Past, NotNull}
++ statement: String {NotBlank, Length}
++ money: Money {NotNull}
++ investor: Investor {NotNull, Valid, ManyToOne}
++ investmentRound: InvestmentRound {NotNull, Valid, ManyToOne}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>246</x>
+      <y>594</y>
+      <w>234</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Activity
+--
++ title: String {NotBlank, Length}
++ start: LocalDateTime {DateTimeFormat, NotNull}
++ end: LocalDateTime {DateTimeFormat, NotNull}
++ budget: Money {NotNull}
++ investmentRound: InvestmentRound {NotNull, Valid, ManyToOne}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>594</y>
+      <w>234</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+InvestmentRound
+--
++ ticker: String {NotBlank, Length}
++ creation: LocalDateTime {DateTimeFormat, Past, NotNull}
++ round: String {NotBlank}
++ title: String {NotBlank, Length}
++ description: String {NotBlank, Length}
++ money: Money {NotNull, Valid}
++ link: String
++ entrepreneur: Entrepreneur {NotNull, Valid, ManyToOne}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>606</x>
+      <y>342</y>
+      <w>132</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Rounds
+--
++ SEED
++ ANGEL
++ SERIES-A
++ SERIES-B
++ SERIES-C
++ BRIDGE
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>342</y>
+      <w>156</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Entrepreneur
+--
++ name: String {NotBlank, Length}
++ sector: String {NotBlank, Length}
++ qualifications: Integer {NotNull}
++ skills: String {NotBlank, Length}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>432</y>
+      <w>156</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Investor
+--
++ firmName: String {NotBlank, Length}
++ sector: String {NotBlank, Length}
++ profile: String {NotBlank, Length}</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
