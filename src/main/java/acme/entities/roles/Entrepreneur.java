@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Length;
+
 import acme.framework.entities.UserRole;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,15 +23,18 @@ public class Entrepreneur extends UserRole {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
+	@Length(max = 255)
 	private String				name;
 
 	@NotBlank
+	@Length(max = 255)
 	private String				sector;
 
 	@NotNull
 	private Integer				qualification;
 
-	@NotNull
+	@NotBlank
+	@Length(max = 255)
 	private String				skills;
 
 	// Derived attributes -----------------------------------------------------
