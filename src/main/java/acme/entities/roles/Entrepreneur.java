@@ -30,7 +30,7 @@ public class Entrepreneur extends UserRole {
 	@Length(max = 255)
 	private String				sector;
 
-	@NotNull
+	@NotBlank
 	private Integer				qualification;
 
 	@NotBlank
