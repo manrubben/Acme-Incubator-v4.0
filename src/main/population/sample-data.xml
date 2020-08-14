@@ -47,24 +47,24 @@
 
 	<bean id="toolRecord01" class="acme.entities.ToolRecords">
 		<property name="title" value="Sample Tool Record" />
-		<property name="activitySector" value="Sector 1" />
+		<property name="activitySector" value="Arts" />
 		<property name="inventorsName" value="Henry" />
 		<property name="description"
 			value="This is a sample description" />
 		<property name="website" value="http://www.henry.com" />
 		<property name="email" value="henry@gmail.com" />
-		<property name="indication" value="closed-source" />
+		<property name="indication" value="closed_source" />
 		<property name="stars" value="4" />
 	</bean>
 	
 	<bean id="toolRecord02" class="acme.entities.ToolRecords">
 		<property name="title" value="Sample Tool Record 2" />
-		<property name="activitySector" value="Sector 2" />
+		<property name="activitySector" value="Health" />
 		<property name="inventorsName" value="Mark" />
 		<property name="description" value="This is a sample description" />
 		<property name="website" value="http://www.mark.com" />
 		<property name="email" value="mark@gmail.com"/>
-		<property name="indication" value="closed-source"/>
+		<property name="indication" value="closed_source"/>
 		<property name="stars" value="5"/>
 	</bean>
 
