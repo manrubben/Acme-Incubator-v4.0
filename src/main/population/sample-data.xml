@@ -33,7 +33,7 @@
 	<bean id="technologyRecord01"
 		class="acme.entities.TechnologyRecords">
 		<property name="title" value="Sample Technology Record" />
-		<property name="activitySector" value="Sector 1" />
+		<property name="activitySector" value="Science" />
 		<property name="inventorsName" value="Peter" />
 		<property name="description"
 			value="This is a sample description" />
