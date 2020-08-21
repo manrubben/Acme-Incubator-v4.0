@@ -23,7 +23,8 @@ administrator.inquiries.form.button.create = Crear
 administrator.inquiries.form.button.update = Actualizar
 administrator.inquiries.form.button.delete = Eliminar
 
-administrator.inquiries.error.must-be-eur = La moneda debe estar en euros 
+administrator.inquiries.error.must-be-eur = La moneda debe estar en euros
+administrator.inquiries.error.deadlineIsAfter = La fecha límite debe ser posterior a la fecha actual
 
 
 administrator.inquiries.form.button.return = Volver

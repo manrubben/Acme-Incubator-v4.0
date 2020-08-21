@@ -36,6 +36,9 @@ public class Configuration extends DomainEntity {
 	@Digits(integer = 1, fraction = 3) // Redondear números fraccionarios con la regla del redondeo estándar
 	private Double				spamThreshold;
 
+	@NotBlank
+	private String				activitySectors;
+
 
 	@Transient
 	public boolean isSpam(final String text) {

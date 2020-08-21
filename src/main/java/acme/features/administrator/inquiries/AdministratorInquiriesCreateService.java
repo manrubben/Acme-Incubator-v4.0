@@ -19,6 +19,7 @@ public class AdministratorInquiriesCreateService implements AbstractCreateServic
 	@Autowired
 	private AdministratorInquiriesRepository repository;
 
+
 	@Override
 	public boolean authorise(final Request<Inquiries> request) {
 		assert request != null;
@@ -64,6 +65,11 @@ public class AdministratorInquiriesCreateService implements AbstractCreateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		if (!errors.hasErrors("deadline")) {
+			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+			errors.state(request, isAfter, "deadline", "administrator.inquiries.error.deadlineIsAfter");
+		}
 
 		if (!errors.hasErrors("moneyMin")) {
 			Boolean isEur = entity.getMoneyMin().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");

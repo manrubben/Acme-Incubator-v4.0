@@ -65,10 +65,15 @@ public class AdministratorOverturesCreateService implements AbstractCreateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
+
 		if (!errors.hasErrors("rangeMoney")) {
 			Boolean isEur = entity.getRangeMoney().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
 			errors.state(request, isEur, "rangeMoney", "administrator.overtures.error.must-be-eur");
+		}
+
+		if (!errors.hasErrors("deadline")) {
+			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+			errors.state(request, isAfter, "deadline", "administrator.overtures.error.deadlineIsAfter");
 		}
 
 	}
