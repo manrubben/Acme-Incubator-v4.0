@@ -304,6 +304,7 @@
 		<property name="userAccount" ref="investor2UserAccount" />
 	</bean>	
 	
+
 	<!--  Investment Rounds -->
 	
 	<bean id="investmentRound01" class="acme.entities.InvestmentRound">
@@ -314,6 +315,43 @@
 		<property name="description" value="Hello!" />
 		<property name="money" value="00040000.00 EUR" />
 		<property name="link" value="http://www.example.com" />
+		<property name="finalMode" value="true" />
+		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
+	</bean>
+	
+	<bean id="investmentRound02" class="acme.entities.InvestmentRound">
+		<property name="ticker" value="SEC-20-000001" />
+		<property name="creation" value="20-06-2020 20:12" />
+		<property name="round" value="SEED" />
+		<property name="title" value="Investment Round 2" />
+		<property name="description" value="Hello!" />
+		<property name="money" value="00060000.00 EUR" />
+		<property name="link" value="http://www.example.com" />
+		<property name="finalMode" value="false" />
+		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
+	</bean>
+	
+	<bean id="investmentRound03" class="acme.entities.InvestmentRound">
+		<property name="ticker" value="SEC-20-000003" />
+		<property name="creation" value="20-08-2020 20:11" />
+		<property name="round" value="SEED" />
+		<property name="title" value="Investment Round 3" />
+		<property name="description" value="Hello!" />
+		<property name="money" value="00070000.00 EUR" />
+		<property name="link" value="http://www.example.com" />
+		<property name="finalMode" value="true" />
+		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
+	</bean>
+	
+	<bean id="investmentRound04" class="acme.entities.InvestmentRound">
+		<property name="ticker" value="SEC-20-000004" />
+		<property name="creation" value="20-08-2019 20:11" />
+		<property name="round" value="SEED" />
+		<property name="title" value="Investment Round 4" />
+		<property name="description" value="Hello!" />
+		<property name="money" value="00020000.00 EUR" />
+		<property name="link" value="http://www.example.com" />
+		<property name="finalMode" value="true" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
 	</bean>
 	
@@ -322,6 +360,7 @@
 	<bean name="application01" class="acme.entities.Application">
 		<property name="ticker" value="SEC-20-123456" />
 		<property name="creation" value="20-07-2020 20:11" />
+		<property name="status" value="ACCEPTED" />
 		<property name="statement" value="This is a short statement" />
 		<property name="money" value="00040000.00 EUR" />
 		<property name="investor" ref="investor1Investor" />
@@ -331,6 +370,7 @@
 	<bean name="application02" class="acme.entities.Application">
 		<property name="ticker" value="SEC-20-999999" />
 		<property name="creation" value="20-05-2020 20:11" />
+		<property name="status" value="PENDING" />
 		<property name="statement" value="This is a sample statement" />
 		<property name="money" value="00030000.00 EUR" />
 		<property name="investor" ref="investor2Investor" />

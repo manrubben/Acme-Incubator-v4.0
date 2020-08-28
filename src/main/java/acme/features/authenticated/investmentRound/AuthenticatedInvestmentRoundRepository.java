@@ -15,7 +15,7 @@ public interface AuthenticatedInvestmentRoundRepository extends AbstractReposito
 	@Query("select ir from InvestmentRound ir where ir.id = ?1")
 	InvestmentRound findOneById(int id);
 
-	@Query("select ir from InvestmentRound ir")
+	@Query("select i from InvestmentRound i where i.finalMode = true")
 	Collection<InvestmentRound> findManyAll();
 
 }

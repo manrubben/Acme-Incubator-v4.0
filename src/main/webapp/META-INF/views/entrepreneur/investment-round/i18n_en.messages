@@ -19,9 +19,9 @@ entrepreneur.investmentRound.form.label.title = Title:
 entrepreneur.investmentRound.form.label.description = Description:
 entrepreneur.investmentRound.form.label.money = Money:
 entrepreneur.investmentRound.form.label.link = Link:
-
-entrepreneur.investmentRound.error.mensajeRechazo = It is not possible to publish the investment round.
+entrepreneur.investmentRound.form.label.finalMode = Final Mode:
 
 entrepreneur.application.button.list = List applications
+entrepreneur.investmentRound.form.button.listAct = List activities
 
 entrepreneur.application.form.button.return = Return

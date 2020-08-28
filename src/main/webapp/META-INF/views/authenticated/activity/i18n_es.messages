@@ -1,4 +1,4 @@
-# i18n_en.messages
+# i18n_es.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
 #
@@ -8,13 +8,12 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-entrepreneur.application.form.label.ticker = Ticker:
-entrepreneur.application.form.label.creation = Creation:
-entrepreneur.application.form.label.statement = Statement:
-entrepreneur.application.form.label.money = Money:
-entrepreneur.application.form.label.status = Status:
+authenticated.activity.form.label.title = Título:
+authenticated.activity.form.label.start = Comienzo:
+authenticated.activity.form.label.end = Final:
+authenticated.activity.form.label.budget = Presupuesto: 
 
-entrepreneur.application.list.label.ticker = Ticker
-entrepreneur.application.list.label.creation = Creation
+authenticated.activity.list.label.title = Título
+authenticated.activity.list.label.budget = Presupuesto
 
-entrepreneur.application.form.button.return = Return
+authenticated.activity.form.button.return = Volver

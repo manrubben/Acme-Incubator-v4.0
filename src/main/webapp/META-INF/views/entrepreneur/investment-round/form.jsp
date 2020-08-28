@@ -24,9 +24,13 @@
 	<acme:form-textarea code="entrepreneur.investmentRound.form.label.description" path="description" />
 	<acme:form-money code="entrepreneur.investmentRound.form.label.money" path="money" />
 	<acme:form-url code="entrepreneur.investmentRound.form.label.link" path="link" />
+	<acme:form-textbox code="entrepreneur.investmentRound.form.label.finalMode" path="finalMode" />
 
 	<acme:form-submit test="${command == 'show'}" code="entrepreneur.application.button.list" method="get" 
 		action="/entrepreneur/application/list-investment-rounds-app?id=${id}"/>
+		
+	<acme:form-submit test="${command == 'show'}"
+	 	code="entrepreneur.investmentRound.form.button.listAct" method="get" action="/entrepreneur/activity/list-by-investment-rounds?id=${id}"/>
 	
 	<acme:form-return code="entrepreneur.application.form.button.return" />
 	

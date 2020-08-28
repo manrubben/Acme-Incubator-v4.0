@@ -15,16 +15,11 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="true">
-
-	<acme:form-textbox code="investor.application.form.label.ticker" path="ticker"/>
-	<acme:form-moment code="investor.application.form.label.creation" path="creation"/>
-	<acme:form-textbox code="investor.application.form.label.status" path="status"/>
-	<acme:form-textarea code="investor.application.form.label.statement" path="statement"/>
-	<acme:form-money code="investor.application.form.label.money" path="money"/>
-	
-
-  <acme:form-return code="investor.application.form.button.return"/>
-     
-
+<acme:form>
+	<acme:form-textbox code="administrator.configuration.form.label.spamWords" path="spamWords"/>
+	<acme:form-textbox code="administrator.configuration.form.label.spamThreshold" path="spamThreshold"/>
+	<acme:form-submit   
+	                   code="administrator.configuration.form.label.button.update" 
+	                   action="/administrator/configuration/update"/>
+  	<acme:form-return code="administrator.configuration.form.button.return"/>
 </acme:form>

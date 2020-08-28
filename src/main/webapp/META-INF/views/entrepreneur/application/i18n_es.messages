@@ -12,6 +12,7 @@ entrepreneur.application.form.label.ticker = Ticker:
 entrepreneurr.application.form.label.creation = Creación:
 entrepreneur.application.form.label.statement = Declaración:
 entrepreneur.application.form.label.money = Dinero:
+entrepreneur.application.form.label.status = Estado:
 
 entrepreneur.application.list.label.ticker = Ticker
 entrepreneur.application.list.label.creation = Creación
