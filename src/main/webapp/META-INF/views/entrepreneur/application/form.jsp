@@ -18,6 +18,7 @@
 <acme:form>
 	<acme:form-textbox readonly="true" code="entrepreneur.application.form.label.ticker" path="ticker" />
 	<acme:form-moment readonly="true" code="entrepreneur.application.form.label.creation" path="creation" />
+	<acme:form-textbox readonly="true" code="entrepreneur.application.form.label.status" path="status"/>
 	<acme:form-textarea readonly="true" code="entrepreneur.application.form.label.statement" path="statement" />
 	<acme:form-money readonly="true" code="entrepreneur.application.form.label.money" path="money" />
 	

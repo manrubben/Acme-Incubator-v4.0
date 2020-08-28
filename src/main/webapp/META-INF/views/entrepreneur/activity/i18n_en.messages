@@ -8,13 +8,14 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-entrepreneur.application.form.label.ticker = Ticker:
-entrepreneur.application.form.label.creation = Creation:
-entrepreneur.application.form.label.statement = Statement:
-entrepreneur.application.form.label.money = Money:
-entrepreneur.application.form.label.status = Status:
 
-entrepreneur.application.list.label.ticker = Ticker
-entrepreneur.application.list.label.creation = Creation
+entrepreneur.activity.form.label.title = Title:
+entrepreneur.activity.form.label.start = Start:
+entrepreneur.activity.form.label.end = End:
+entrepreneur.activity.form.label.budget = Budget: 
 
-entrepreneur.application.form.button.return = Return
+entrepreneur.activity.list.label.title = Title
+entrepreneur.activity.list.label.budget = Budget
+
+entrepreneur.activity.form.button.return = Return 
+
