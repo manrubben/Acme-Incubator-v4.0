@@ -22,7 +22,6 @@ import acme.entities.Inquiries;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
-import acme.framework.entities.Authenticated;
 
 @Controller
 @RequestMapping("/authenticated/inquiries/")
@@ -31,11 +30,10 @@ public class AuthenticatedInquiriesController extends AbstractController<Authent
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedInquiriesListService		listService;
+	private AuthenticatedInquiriesListService	listService;
 
 	@Autowired
-	private AuthenticatedInquiriesShowService		showService;
-
+	private AuthenticatedInquiriesShowService	showService;
 
 
 	// Constructors -----------------------------------------------------------

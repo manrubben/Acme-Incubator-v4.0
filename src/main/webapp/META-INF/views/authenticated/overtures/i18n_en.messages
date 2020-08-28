@@ -2,7 +2,8 @@ authenticated.overtures.form.label.title = Title:
 authenticated.overtures.form.label.creation = Creation:
 authenticated.overtures.form.label.deadline = Deadline:
 authenticated.overtures.form.label.paragraph = Paragraph:
-authenticated.overtures.form.label.rangeMoney = Range money:
+administrator.overtures.form.label.moneyMin = Money Min:
+administrator.overtures.form.label.moneyMax = Money Max:
 authenticated.overtures.form.label.email = Email:
 
 authenticated.overtures.form.button.return = Return
