@@ -5,8 +5,8 @@ administrator.overtures.form.label.title = Title:
 administrator.overtures.form.label.creation = Creation:
 administrator.overtures.form.label.deadline = Deadline:
 administrator.overtures.form.label.paragraph = Paragraph:
-administrator.overtures.form.label.moneyMin = Money Min:
-administrator.overtures.form.label.moneyMax = Money Max:
+administrator.overtures.form.label.moneyMin = Minimum Money:
+administrator.overtures.form.label.moneyMax = Maximum Money:
 administrator.overtures.form.label.email = Email:
 
 administrator.overtures.form.button.create = Create

@@ -34,7 +34,7 @@ public class AdministratorTechnologyRecordsListService
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "activitySector", "inventorsName", "description");
+		request.unbind(entity, model, "title", "activitySector", "activitySector", "stars");
 	}
 
 	@Override

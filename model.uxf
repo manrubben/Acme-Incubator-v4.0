@@ -154,14 +154,14 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>304</x>
       <y>224</y>
-      <w>176</w>
-      <h>56</h>
+      <w>224</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 CustomCommand
 --
-
-
++ LIST_INVESTMENT_ROUNDS_APP
++ LIST_BY_INVESTMENT_ROUNDS
 bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
@@ -394,7 +394,7 @@ Notices
       <x>352</x>
       <y>792</y>
       <w>312</w>
-      <h>120</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Overtures
@@ -403,7 +403,8 @@ Overtures
 + creation: LocalDateTime {DateTimeFormat, Past, NotNull}
 + deadline: LocalDateTime {DateTimeFormat, NotNull}
 + paragraph: String {NotBlank}
-+ rangeMoney: Money {NotNull}
++ moneyMin: Money {NotNull, Valid}
++ moneyMax: Money {NotNull, Valid}
 + email: String {Email, NotBlank, Length}
 </panel_attributes>
     <additional_attributes/>
@@ -458,7 +459,7 @@ InvestmentRound
 --
 + ticker: String {NotBlank, Pattern}
 + creation: LocalDateTime {DateTimeFormat, Past, NotNull}
-+ round: String {NotBlank}
++ round: Rounds {NotNull}
 + title: String {NotBlank, Length}
 + description: String {NotBlank, Length}
 + money: Money {NotNull, Valid}
