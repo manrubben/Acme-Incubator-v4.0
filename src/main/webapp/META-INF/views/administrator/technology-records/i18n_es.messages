@@ -14,6 +14,8 @@ administrator.technology-records.form.label.indication = Indicación:
 administrator.technology-records.form.label.stars = Estrellas:
 
 administrator.technology-records.list.label.activitySector = Sector de actividad
+administrator.technology-records.list.label.title = Title 
+administrator.technology-records.list.label.stars = Stars
 
 administrator.technology-records.form.button.create = Crear
 administrator.technology-records.form.button.update = Actualizar
