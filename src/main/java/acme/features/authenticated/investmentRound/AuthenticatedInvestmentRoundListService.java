@@ -18,6 +18,7 @@ public class AuthenticatedInvestmentRoundListService implements AbstractListServ
 	@Autowired
 	private AuthenticatedInvestmentRoundRepository repository;
 
+
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
@@ -31,7 +32,7 @@ public class AuthenticatedInvestmentRoundListService implements AbstractListServ
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title");
+		request.unbind(entity, model, "title", "money");
 
 	}
 
