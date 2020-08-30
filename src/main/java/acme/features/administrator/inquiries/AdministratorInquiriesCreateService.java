@@ -81,6 +81,12 @@ public class AdministratorInquiriesCreateService implements AbstractCreateServic
 			errors.state(request, isEur, "moneyMin", "administrator.inquiries.error.must-be-eur");
 		}
 
+		if (!errors.hasErrors("moneyMax")) {
+			Double moneyMin = entity.getMoneyMin().getAmount();
+			boolean isGreater = entity.getMoneyMax().getAmount().compareTo(moneyMin) > 0;
+			errors.state(request, isGreater, "moneyMax", "administrator.inquiries.error.is-greater");
+		}
+
 	}
 
 	@Override
