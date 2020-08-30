@@ -291,17 +291,18 @@ has v</panel_attributes>
       <x>24</x>
       <y>456</y>
       <w>288</w>
-      <h>160</h>
+      <h>168</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Challenges
 --
-+ title: String {NotBlank, Length}
-+ deadline: LocalDateTime {DateTimeFormat, NotNull}
-+ description: String {NotBlank, Length}
-+ expertGoal: String {NotBlank, Length}
-+ averageGoal: String {NotBlank, Length}
-+ rookieGoal: String {NotBlank, Length}
++ title: String {NotBlank, Length(max = 255}
++ deadline: LocalDateTime {DateTimeFormat(
+pattern = "dd-MM-yyyy HH:mm"), NotNull}
++ description: String {NotBlank, Length(max = 255)}
++ expertGoal: String {NotBlank, Length(max=255)}
++ averageGoal: String {NotBlank, Length(max=255)}
++ rookieGoal: String {NotBlank, Length(max=255)}
 + expertReward: Money {NotNull, Valid}
 + averageReward: Money {NotNull, Valid}
 + rookieReward: Money {NotNull, Valid}</panel_attributes>
@@ -310,43 +311,43 @@ Challenges
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>368</x>
+      <x>328</x>
       <y>456</y>
-      <w>232</w>
+      <w>272</w>
       <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 TechnologyRecords
 --
-+ title: String {NotBlank, Length}
++ title: String {NotBlank, Length(max = 255)} 
 + activitySector: ActivitySector {NotNull}
-+ inventorsName: String {NotBlank, Length}
-+ description: String {NotBlank, Length}
-+ website: String {URL, NotBlank, Length}
-+ email: String {Email, NotBlank, Length}
++ inventorName: String {NotBlank, Length(max = 255)}
++ description: String {NotBlank, Length(max = 255)}
++ website: String {URL, NotBlank, Length(max = 255)}
++ email: String {Email, NotBlank, Length(max = 255)}
 + indication: Indication {NotNull}
-+ stars: Integer {Min, Max}</panel_attributes>
++ stars: Integer {Min(value = -5), Max(value = 5)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>632</x>
+      <x>616</x>
       <y>456</y>
-      <w>208</w>
+      <w>256</w>
       <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 ToolRecords
 --
-+ title: String {NotBlank, Length}
++ title: String {NotBlank, Length(max = 255)} 
 + activitySector: ActivitySector {NotNull}
-+ inventorsName: String {NotBlank, Length}
-+ description: String {NotBlank, Length}
-+ website: String {URL, NotBlank, Length}
-+ email: String {Email, NotBlank, Length}
++ inventorName: String {NotBlank, Length(max = 255)}
++ description: String {NotBlank, Length(max = 255)}
++ website: String {URL, NotBlank, Length(max = 255)}
++ email: String {Email, NotBlank, Length(max = 255)}
 + indication: Indication {NotNull}
-+ stars: Integer {Min, Max}</panel_attributes>
++ stars: Integer {Min(value = -5), Max(value = 5)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -360,13 +361,16 @@ ToolRecords
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Inquiries
 --
-+ title: String {NotBlank, Length}
-+ creation: LocalDateTime {DateTimeFormat, Past, NotNull}
-+ deadline: LocalDateTime {DateTimeFormat, NotNull}
++ title: String {NotBlank, Length(max = 255)} 
++ creation: LocalDateTime {DateTimeFormat(
+pattern = "dd-MM-yyyy HH:mm"), Past, NotNull}
++ deadline: LocalDateTime {@DateTimeFormat
+(pattern = "dd-MM-yyyy HH:mm"), NotNull}
 + paragraph: String {NotBlank}
 + moneyMin: Money {NotNull, Valid}
 + moneyMax: Money {NotNull, Valid}
-+ email: String {NotBlank, Email, Length}</panel_attributes>
++ email: String {NotBlank, Email, Length(max = 255)}
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -374,16 +378,18 @@ Inquiries
     <coordinates>
       <x>360</x>
       <y>648</y>
-      <w>232</w>
-      <h>120</h>
+      <w>248</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Notices
 --
-+ headerPicture: String {NotBlank, URL}
-+ title: String {NotBlank, Length}
-+ creation: LocalDateTime {DateTimeFormat, Past, NotNull}
-+ deadline: LocalDateTime {DateTimeFormat, NotNull}
++ headerPicture: String {URL,NotBlank} 
++ title: String {NotBlank, Length(max = 255)}
++ creation: LocalDateTime {DataTimeFormat(
+pattern = "dd-MM-yyyy HH:mm"), Past, NotNull}
++ deadline: LocalDateTime {@DateTimeFormat
+(pattern = "dd-MM-yyyy HH:mm"), NotNull}
 + body: String {NotBlank}
 + links: String</panel_attributes>
     <additional_attributes/>
@@ -392,20 +398,22 @@ Notices
     <id>UMLClass</id>
     <coordinates>
       <x>352</x>
-      <y>792</y>
+      <y>800</y>
       <w>312</w>
-      <h>136</h>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Overtures
 --
-+ title: String {NotBlank, Length}
-+ creation: LocalDateTime {DateTimeFormat, Past, NotNull}
-+ deadline: LocalDateTime {DateTimeFormat, NotNull}
++ title: String {NotBlank, Length(max=255)}
++ creation: LocalDateTime {DataTimeFormat(
+pattern = "dd-MM-yyyy HH:mm"), Past, NotNull}
++ deadline: LocalDateTime {DateTimeFormat(
+pattern = "dd-MM-yyyy HH:mm"), NotNull}
 + paragraph: String {NotBlank}
-+ moneyMin: Money {NotNull, Valid}
++ moneyMin: Money {NotNull,Valid}
 + moneyMax: Money {NotNull, Valid}
-+ email: String {Email, NotBlank, Length}
++ email: String {Email, NotBlank, Length(max=255)}
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -420,29 +428,34 @@ Overtures
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Application
 --
-+ ticker: String {NotBlank, Length}
-+ creation: LocalDateTime {DateTimeFormat, Past, NotNull}
-+ statement: String {NotBlank, Length}
-+ money: Money {NotNull, Valid}
-+ investor: Investor {NotNull, Valid, ManyToOne}
-+ investmentRound: InvestmentRound {NotNull, Valid, ManyToOne}</panel_attributes>
++ ticker: String {NotBlank, Psttern = [A-Z]{3}[-][0-9]{2}[-][0-9]{6}$}
++ creation: LocalDateTime {DateTimeFormat=(
+pattern = "dd-MM-yyyy HH:mm"), Past, NotNull}
++ status : ApplicationStatus {NotNull}
++ statement: String {NotBlank, Length(max=255)}
++ money: Money {NotNull,Valid}
++ justification: String {NotBlank, Length(max=255)}
+
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1280</x>
-      <y>784</y>
+      <x>1288</x>
+      <y>760</y>
       <w>312</w>
       <h>128</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Activity
 --
-+ title: String {NotBlank, Length}
-+ start: LocalDateTime {DateTimeFormat, NotNull}
-+ end: LocalDateTime {DateTimeFormat, NotNull}
-+ budget: Money {NotNull, Valid}
++ title: String {NotBlank, Length(max = 255)} 
++ start: LocalDateTime {DateTimeFormat(
+pattern = "dd-MM-yyyy HH:mm"), NotNull}
++ end: LocalDateTime {DateTimeFormat(
+pattern = "dd-MM-yyyy HH:mm"), NotNull}
++ budget: Money {NotNull,Valid}
 + investmentRound: InvestmentRound {NotNull, Valid, ManyToOne}</panel_attributes>
     <additional_attributes/>
   </element>
@@ -451,20 +464,22 @@ Activity
     <coordinates>
       <x>1280</x>
       <y>512</y>
-      <w>312</w>
+      <w>328</w>
       <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 InvestmentRound
 --
-+ ticker: String {NotBlank, Pattern}
-+ creation: LocalDateTime {DateTimeFormat, Past, NotNull}
++ ticker: String {NotBlank, Pattern=^[A-Z]{3}[-][0-9]{2}[-][0-9]{6}$}
++ creation: LocalDateTime {DateTimeFormat=(
+pattern = "dd-MM-yyyy HH:mm"), Past, NotNull}
 + round: Rounds {NotNull}
-+ title: String {NotBlank, Length}
-+ description: String {NotBlank, Length}
++ title: String {NotBlank, Length(max=255)}
++ description: String {NotBlank, Length(max=255)}
 + money: Money {NotNull, Valid}
-+ link: String {URL}
-+ entrepreneur: Entrepreneur {NotNull, Valid, ManyToOne}</panel_attributes>
++ link: String{URL}
++ finalMode: Boolean {NotNull}
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -510,15 +525,15 @@ Entrepreneur
     <coordinates>
       <x>904</x>
       <y>304</y>
-      <w>208</w>
+      <w>256</w>
       <h>88</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Investor
 --
-+ firmName: String {NotBlank, Length}
-+ sector: String {NotBlank, Length}
-+ profile: String {NotBlank, Length}</panel_attributes>
++ firmName: String {NotBlank, Length(max=255)}
++ sector: String {NotBlank, Length(max=255)}
++ profile: String {NotBlank, Length(max=255)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -526,14 +541,14 @@ Investor
     <coordinates>
       <x>1416</x>
       <y>384</y>
-      <w>56</w>
+      <w>64</w>
       <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 m1=*
 m2=1
 has v</panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+    <additional_attributes>30.0;160.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -560,16 +575,16 @@ has v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1424</x>
+      <x>1432</x>
       <y>656</y>
       <w>56</w>
-      <h>144</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 m1=*
 m2=1
 has v</panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;130.0;20.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>

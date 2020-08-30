@@ -17,5 +17,5 @@
 
 <acme:list>
 	<acme:list-column code="entrepreneur.investmentRound.list.label.title" path="title" width="80%"/>
-	<acme:list-column code="entrepreneur.investmentRound.list.label.creation" path="creation" width="10%"/>
+	<acme:list-column code="entrepreneur.investmentRound.list.label.money" path="money" width="10%"/>
 </acme:list>
