@@ -6,7 +6,9 @@ authenticated.investment-round.form.label.title = Title:
 authenticated.investment-round.form.label.money = Amount of money:
 authenticated.investment-round.form.label.link = Link:
 
+authenticated.investment-round.form.button.activity-list = List activities
 authenticated.investment-round.form.button.return = Return
 
 authenticated.investment-round.list.label.title = Title
 authenticated.investment-round.list.label.entrepreneur = Entrepreneur
+authenticated.investment-round.list.label.money = Money

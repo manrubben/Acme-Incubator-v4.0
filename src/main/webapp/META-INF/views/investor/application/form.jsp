@@ -19,6 +19,7 @@
 
 	<acme:form-textbox code="investor.application.form.label.ticker" path="ticker"/>
 	<acme:form-moment code="investor.application.form.label.creation" path="creation"/>
+	<acme:form-textbox code="investor.application.form.label.status" path="status"/>
 	<acme:form-textarea code="investor.application.form.label.statement" path="statement"/>
 	<acme:form-money code="investor.application.form.label.money" path="money"/>
 	

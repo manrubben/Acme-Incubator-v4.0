@@ -33,7 +33,7 @@ public class AdministratorNoticesCreateService implements AbstractCreateService<
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "moment");
+		request.bind(entity, errors, "creation");
 	}
 
 	@Override
@@ -74,14 +74,18 @@ public class AdministratorNoticesCreateService implements AbstractCreateService<
 			Boolean isAccepted = request.getModel().getBoolean("accept");
 			errors.state(request, isAccepted, "accept", "administrator.notices.error.must-accept");
 		}
+
+		if (!errors.hasErrors("deadline")) {
+			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+			errors.state(request, isAfter, "deadline", "administrator.notices.error.deadlineIsAfter");
+		}
 	}
 
 	@Override
 	public void create(final Request<Notices> request, final Notices entity) {
+		assert request != null;
+		assert entity != null;
 
-		LocalDateTime creation;
-		creation = LocalDateTime.now();
-		entity.setCreation(creation);
 		this.repository.save(entity);
 	}
 

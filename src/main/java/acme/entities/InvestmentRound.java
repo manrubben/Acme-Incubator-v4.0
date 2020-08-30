@@ -41,8 +41,8 @@ public class InvestmentRound extends DomainEntity {
 	@NotNull
 	private LocalDateTime		creation;
 
-	@NotBlank
-	private String				round;
+	@NotNull
+	private Rounds				round;
 
 	@NotBlank
 	@Length(max = 255)
@@ -58,6 +58,9 @@ public class InvestmentRound extends DomainEntity {
 
 	@URL
 	private String				link;
+
+	@NotNull
+	private Boolean				finalMode;
 
 	// Relationships ----------------------------------------------------------
 

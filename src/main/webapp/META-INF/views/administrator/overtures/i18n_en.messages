@@ -5,7 +5,8 @@ administrator.overtures.form.label.title = Title:
 administrator.overtures.form.label.creation = Creation:
 administrator.overtures.form.label.deadline = Deadline:
 administrator.overtures.form.label.paragraph = Paragraph:
-administrator.overtures.form.label.rangeMoney = Range money:
+administrator.overtures.form.label.moneyMin = Minimum Money:
+administrator.overtures.form.label.moneyMax = Maximum Money:
 administrator.overtures.form.label.email = Email:
 
 administrator.overtures.form.button.create = Create
@@ -13,5 +14,7 @@ administrator.overtures.form.button.update = Update
 administrator.overtures.form.button.delete = Delete
 
 administrator.overtures.error.must-be-eur = Money must be set in euros
+administrator.overtures.error.deadlineIsAfter = Deadline must be after the current date
+administrator.overtures.error.is-greater = Money max must be greater than money min
 
 administrator.overtures.form.button.return = Return

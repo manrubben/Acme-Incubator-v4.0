@@ -40,6 +40,9 @@ public class Application extends DomainEntity {
 	@NotNull
 	private LocalDateTime		creation;
 
+	@NotNull
+	private ApplicationStatus	status;
+
 	@NotBlank
 	@Length(max = 255)
 	private String				statement;

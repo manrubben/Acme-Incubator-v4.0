@@ -3,6 +3,7 @@ investor.application.form.label.ticker = Ticker:
 investor.application.form.label.creation = Fecha de creación:
 investor.application.form.label.statement = Declaración:
 investor.application.form.label.money = Dinero:
+investor.application.form.label.status = Estado:
 
 investor.application.form.button.return = Volver
 

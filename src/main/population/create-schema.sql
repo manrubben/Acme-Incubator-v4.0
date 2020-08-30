@@ -28,9 +28,9 @@
     create table `application` (
        `id` integer not null,
         `version` integer not null,
+        `creation` datetime(6),
         `money_amount` double precision,
         `money_currency` varchar(255),
-        `start` datetime(6),
         `statement` varchar(255),
         `ticker` varchar(255),
         `investment_round_id` integer not null,
@@ -160,7 +160,7 @@
     create table `technology_records` (
        `id` integer not null,
         `version` integer not null,
-        `activity_sector` varchar(255),
+        `activity_sector` integer,
         `description` varchar(255),
         `email` varchar(255),
         `indication` varchar(255),
@@ -174,10 +174,10 @@
     create table `tool_records` (
        `id` integer not null,
         `version` integer not null,
-        `activity_sector` varchar(255),
+        `activity_sector` integer,
         `description` varchar(255),
         `email` varchar(255),
-        `indication` varchar(255),
+        `indication` integer,
         `inventors_name` varchar(255),
         `stars` integer,
         `title` varchar(255),
