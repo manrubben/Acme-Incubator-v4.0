@@ -40,4 +40,4 @@ administrator.challenges.form.button.create = Create
 administrator.challenges.error.euroZone = Only euro currency supported
 administrator.challenges.error.rookieReward = Rookie reward must be lower than Average reward
 administrator.challenges.error.averageReward = Average reward must be lower than Expert reward
-administrator.notices.error.deadlineIsAfter = Deadline must be after the current date
+administrator.challenges.error.deadlineIsAfter1Month = Deadline must be at least one month after the moment the challenge is created
