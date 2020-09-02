@@ -84,11 +84,12 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 
 		}
 
-		boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
-		if (!isAfter) {
-			if (!errors.hasErrors("deadline")) {
-				errors.state(request, isAfter, "deadline", "administrator.challenges.error.deadlineIsAfter");
-			}
+		if (!errors.hasErrors("deadline")) {
+			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+			boolean isAfter30Days = entity.getDeadline().isAfter(LocalDateTime.now().plusMonths(1));
+			errors.state(request, isAfter, "deadline", "administrator.challenges.error.deadlineIsAfter");
+			errors.state(request, isAfter30Days, "deadline", "administrator.challenges.error.deadlineIsAfter30");
+
 		}
 
 	}
