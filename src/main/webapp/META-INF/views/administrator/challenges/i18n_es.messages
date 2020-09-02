@@ -39,6 +39,4 @@ administrator.challenges.form.button.create = Crear
 administrator.challenges.error.euroZone = Solo se admiten euros
 administrator.challenges.error.rookieReward = La recompesa de novato debe ser menor que la de normal
 administrator.challenges.error.averageReward = La recompensa de normal debe ser menor que la de experto
-administrator.notices.error.deadlineIsAfter = La fecha límite debe ser posterior a la fecha actual
-administrator.notices.error.deadlineIsAfter30 = La fecha límite debe ser posterior a 30 dias
-
+administrator.challenges.error.deadlineIsAfter1Month = La fecha límite debe ser al menos un mes después del momento en el que el desafío es creado
